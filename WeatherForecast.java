@@ -60,6 +60,8 @@ public class MainMenuFrame extends JFrame {
     public void setCurrSelectedCity(JsonObject obj){
         currSelectedCity = obj;
     }
+
+
     
     private ForecastWeatherDialog forecastWeatherDialog;
     public ForecastWeatherDialog getForecastWeatherDialog(){
