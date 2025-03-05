@@ -20,6 +20,7 @@ import weather.forecast.MainMenu.SearchPanel;
 
 /**
  *
+ 
  */
 public class MainMenuFrame extends JFrame {
     private JsonArray dataCurrWeather;
@@ -42,7 +43,6 @@ public class MainMenuFrame extends JFrame {
     public SearchPanel getSearchPanel(){
         return searchPanel;
     }
-    
     private CityResultDialog cityResultDialog;
     public CityResultDialog getCityResultDialog(){
         return cityResultDialog;
@@ -53,6 +53,7 @@ public class MainMenuFrame extends JFrame {
         return currentWeatherDialog;
     }
 
+    
     private JsonObject currSelectedCity;
     public JsonObject getCurrSelectedCity(){
         return currSelectedCity;
@@ -95,6 +96,7 @@ public class MainMenuFrame extends JFrame {
         BackgroundPanel background= new BackgroundPanel();
         background.setLayout(new GridBagLayout());
         this.add(background);
+
         
         SearchClickListener searchClickListener = new SearchClickListener(this);
         searchPanel = new SearchPanel(searchClickListener);
@@ -126,7 +128,8 @@ public class MainMenuFrame extends JFrame {
     public void initializeForecastWeatherClickListener(){
         forecastWeatherClickListener = new ForecastWeatherClickListener(this);
     }
-    
+
+
     public void initializeForecastWeatherDialog(){
         forecastWeatherDialog = new ForecastWeatherDialog(this, true, forecastSelectedCity);
     }
